@@ -1,0 +1,128 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+  height: 100%;
+  background-color: #fff;
+}
+
+.navbar {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    font-weight: 400;
+    
+}
+
+
+.navbar > li:not(:last-child) {
+    float: left;
+}
+.navbar > li:last-child {
+    float: right;
+}
+
+.navbar > li a {
+    font-size: 2vh;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1vh 1vw;
+    height: 3vh;
+    text-decoration: none;
+}
+
+.navbar > li a:hover {
+    background-color: #42b5bd;
+}
+.navbar > li:first-child{
+    background-color: #42b5bd;
+}
+
+.hcontainer {
+    display: flex;
+    flex-flow: row;
+    flex: 1;
+    
+    
+}
+
+.vcontainer {
+    display: flex;
+    flex-flow: column;
+    height: 95vh;
+    
+}
+
+.hcontainer > * {
+    font-size: 3vh;
+    flex-flow:row;
+    overflow: scroll;
+}
+
+.agenda{
+    display: flex;
+    flex-flow: column;
+    background-color: rgb(240, 240, 240);
+    height: 95vh;
+    width: 85vw;
+
+}
+.options{
+    background-color: rgb(210, 210, 210);
+    max-height:95vh;
+    width: 15vw;
+}
+
+
+.optionItem {
+    text-align: left;
+    padding:7.5px;
+    list-style-type: none;
+    max-width: 14vw;
+}
+
+.optionItem:hover {
+    background-color: #42b5bd;
+    color: #eeeeee;
+}
+.agendaItem{
+    display: flex;
+    flex-flow:row;
+    align-items: stretch;
+}
+
+.agendaItem > span{
+    padding: 5px;
+    margin-right:0.1vw;
+    min-width: 5vw;
+    border-right: 2px solid rgb(160, 160, 160);
+    margin-left:0.5vw;
+    
+    
+}
+
+.agendaItem > span:last-child{
+    border-right: 0;
+    margin-left: 0;
+    text-align: center;
+    min-width: 1.5vw;
+}
+
+.agendaItem:nth-child(even) {
+    background-color: rgb(220, 220, 220);
+}
+
+.agendaItem:hover{
+    background-color: #42b5bd;
+    color: #eeeeee;
+}
+.agendaItemBig{
+    flex-grow:10;
+    width:20vw;
+}
+
+
+
