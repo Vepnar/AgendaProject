@@ -15,10 +15,11 @@ function getSpreaker(){
     return spreaker = {
 
     name : names[Math.floor(Math.random()*5)],
-    skills : [skills[Math.floor(Math.random()*5)]],
-
-    }
+    skills : [skills[Math.floor(Math.random()*5)],skills[Math.floor(Math.random()*5)]],
+    lastadded : Math.floor(Math.random*100000)+1,
     
+    }
+
 }
 
 for(let i=1;i<53;i++){
