@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
 </head>
 <body>
@@ -16,30 +17,59 @@
             <li><a href="#">Onderwerpen</a></li>
             <li><a href="#">Uitloggen</a></li>
         </ul> 
+        <!-- POPUP -->
+        <div class="infopopupv" id="popup">
+            <div class="infopopuph">
+                <span class="popupdesc">Name:</span>
+                <span class="popupdata" id="sname">Err</span>
+            </div>  
+            <div class="infopopuph">
+                    <span class="popupdesc">Telefoon:</span>
+                    <span class="popupdata" id="phone">06 345678</span>
+            </div>  
+            <div class="infopopuph">
+                    <span class="popupdesc">Plaats:</span>
+                    <span id="location" class="popupdata">Amsterdam</span>
+            </div>  
+            <div class="infopopuph">
+                    <span class="popupdesc">Laaste:</span>
+                    <span id="lasttime" class="popupdata">???</span>
+            </div>  
+            <div class="infopopuph">
+                <span class="popupdata">Onderwerp:</span>
+                <select class="popupdata" id="subject">
+                    <option value="Err">Err</option>
+                </select>
+            </div>
+            <div class="infopopuph">
+                    <span class="popupdesc">Datum:</span>
+                    <input class="popupdata" type="date" name="data">
+            </div>
+            <div class="infopopuph">
+                    <span class="popupdesc">Tijd:</span>
+                    <input class="popupdata" type="time" name="data">
+            </div>
+            <div class="infopopuph">
+                <button class="add">Toevoegen</button>
+                <button class="close" onclick="popupClose()">X</button>
+            </div>
+        </div>
+    <!-- INFORMATION -->
     <div class="vcontainer">
         <div class="hcontainer">
         </div>
         <div class="hcontainer">
-            <ul class="options"></ul>
+            <ul class="options" ></ul>
             <div class="agenda"></div>
         </div>
     </div>
     
     <script type="text/template" id="agendaItemTemplate">
-        <div class="infopopup">
-            <span class="popupdesc">Name:</span>
-            <span class="popupdata">BlaBla</span><br>
-            <span class="popupdata">BlaBla</span>
-            <select>
-                <option value="Skill1">Skill1</option>
-                    <option value="Skill2">Skill2</option>
-                        <option value="Skill3">skill2</option>
-            </select>
-        </div>
+    
         <div class="agendaItem">
             <span>{week}.</span>
             <span class="agendaItemBig">{name}</span>
-            <span class="agendaItemBig">{subject}</span>Name
+            <span class="agendaItemBig">{subject}</span>
             <span>{special}</span>
         </div>
     </script>
