@@ -18,11 +18,10 @@ html, body {
     
 }
 
-
-.navbar > li:not(:last-child) {
+.navbar > li {
     float: left;
 }
-.navbar > li:last-child {
+.navbar > .right {
     float: right;
 }
 
@@ -47,8 +46,7 @@ html, body {
     display: flex;
     flex-flow: row;
     flex: 1;
-    
-    
+     
 }
 
 .vcontainer {
@@ -78,7 +76,6 @@ html, body {
     width: 15vw;
 }
 
-
 .optionItem {
     text-align: left;
     padding:7.5px;
@@ -86,8 +83,8 @@ html, body {
     max-width: 14vw;
 }
 
-.optionItem:hover {
-    background-color: #42b5bd;
+.optionItem:hover:not(.selected) {
+    background-color: #aaaaaa;
     color: #eeeeee;
 }
 .agendaItem{
@@ -114,12 +111,12 @@ html, body {
     min-width: 1.5vw;
 }
 
-.agendaItem:nth-child(even) {
+.agendaItem:nth-child(even):not(.selected) {
     background-color: rgb(220, 220, 220);
 }
 
-.agendaItem:hover{
-    background-color: #42b5bd;
+.agendaItem:hover:not(.selected){
+    background-color: #aaaaaa;
     color: #eeeeee;
 }
 .agendaItemBig{
@@ -192,4 +189,12 @@ button {
 }
 .close:hover{
     background-color: #f07070; 
+}
+
+.selected {
+    background-color: #42b5bd;
+    color: #eeeeee;
+}
+.selected:hover{
+    background-color: #70e7f0;
 }
