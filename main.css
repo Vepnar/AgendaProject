@@ -143,18 +143,18 @@ html, body {
 }
 .popupdesc {    
     color: #010101;
-    flex:3;
+    flex: 3;
 }
 .popupdata {
     color:#3b3b3b;
-    flex:3;
+    flex:4;
 }
 #phone:not(:hover){
     background-color:#3b3b3b;
 }
 
 
-select,input {
+select,input,button {
     background: #e1e1e1;
     border: none;
     height: 2.1vh;
@@ -166,12 +166,7 @@ select,input {
 
 button {
     color: white;
-    border: none;
     height: 3.1vh;
-    width: 10vw;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
     transition-duration: 0.4s;
 }
 .add {
