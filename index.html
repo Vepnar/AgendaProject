@@ -42,18 +42,18 @@
                     <span id="lasttime" class="popupdata">???</span>
             </div>  
             <div class="infopopuph">
-                <span class="popupdata">Onderwerp:</span>
+                <span class="popupdesc  ">Onderwerp:</span>
                 <select class="popupdata" id="subject">
                     <option value="Err">Err</option>
                 </select>
             </div>
             <div class="infopopuph">
                     <span class="popupdesc">Datum:</span>
-                    <input class="popupdata" type="date" name="data">
+                    <input class="popupdata" type="date" name="date" id="datebox">
             </div>
             <div class="infopopuph">
                     <span class="popupdesc">Tijd:</span>
-                    <input class="popupdata" type="time" name="data">
+                    <input class="popupdata" type="text" pattern="([0-1]{1}[0-9]{1}|20|21|22|23):[0-5]{1}[0-9]{1}" name="time" id="timebox">
             </div>
             <div class="infopopuph">
                 <button class="add">Toevoegen</button>
