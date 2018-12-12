@@ -21,10 +21,10 @@ let changed = false;
 let spreakers = [];
 
 /* ##AgendaData##
+ * Week [int]
  * Name [Int]
  * Subject [Int]
  * timestamp [Date]
- * Week [int]
  * Extra information [List]
  */
 
@@ -69,11 +69,32 @@ let optionsClick = function(id) {
     $('#L' + id).addClass('selected');
     $('#lasttime').text(final);
 }
+let nfor = function(num){
+
+    if((num+'').length == 1){
+        return '0'+num;
+
+    }else return num;
+}
 
 let agendaClick = function(id) {
 
     $('.agendaItem').removeClass('selected')
     $('#A' + id).addClass('selected');
+
+    if($('#popup').css('display') === 'flex'){
+        let ad = agendaData[id];
+        let date = new Date(ad[3]); 
+        let datestr = nfor(date.getMonth()) + '/' + nfor(date.getDay()) + '/' + nfor(date.getFullYear());
+        let timestr = nfor(date.getHours()) + ':' + nfor(date.getMinutes());
+
+        console.log(datestr)
+
+        $('#timebox').val(timestr);
+        $('#datebox').val(datestr) ;
+        
+
+    }
 
 }
 
